@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { Container } from "react-bootstrap";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+} from "react-router-dom/cjs/react-router-dom.min";
+import "./App.css";
+import Banner from "./components/Banner/Banner";
+import Customnavbar from "./components/CustomNavbar/CustomNavbar";
+import Footer from "./components/Footer/Footer";
+import Business from "./pages/Business/Business";
+import Home from "./pages/Home/Home";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Container className="app-inner-wrapper">
+          <Banner banner="Breaking News" />
+          <Customnavbar />
+          <div className="main-app">
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => <Home pageTitle="Latest News" />}
+              />
+              <Route
+                path="/business"
+                render={() => <Business pageTitle="Business News" />}
+              />
+            </Switch>
+          </div>
+          <Footer />
+        </Container>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

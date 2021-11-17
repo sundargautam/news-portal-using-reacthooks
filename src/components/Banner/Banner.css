@@ -1,0 +1,88 @@
+.breaking-news-headline {
+  display: block;
+  position: absolute;
+  font-family: arial;
+  font-size: 1rem;
+  margin-top: -30px;
+  color: white;
+  margin-left: 150px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.breaking-news-link {
+  display: block;
+  top: 0;
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  z-index: 20;
+  cursor: pointer;
+}
+.breaking-news-title {
+  background-color: red;
+  color: white;
+  display: block;
+  height: 45px;
+  width: 90px;
+  font-family: arial;
+  font-size: 1rem;
+  position: absolute;
+  top: 0px;
+  margin-top: 0px;
+  margin-left: 20px;
+  padding-top: 15px;
+  padding-left: 10px;
+  z-index: 3;
+}
+.breaking-news-title:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  top: 0;
+  left: -12px;
+  border-left: 12px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 45px solid red;
+}
+.breaking-news-title:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  right: -12px;
+  top: 0;
+  border-right: 12px solid transparent;
+  border-left: 0px solid transparent;
+  border-top: 45px solid red;
+}
+#breaking-news-colour {
+  height: 45px;
+  width: 100%;
+  background-color: #333;
+}
+#breaking-news-container {
+  height: 45px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#breaking-news-container:before {
+  content: "";
+  width: 30px;
+  height: 45px;
+  background-color: #333;
+  position: absolute;
+  z-index: 2;
+}
+
+@media screen and (max-width: 400px) {
+  .breaking-news-headline {
+    font-size: 0.6rem;
+    margin-top: -34px;
+    margin-left: 124px;
+  }
+}

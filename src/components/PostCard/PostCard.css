@@ -1,0 +1,13 @@
+.newscard {
+  margin-bottom: 0.8rem;
+}
+
+@media screen and (max-width: 700px) {
+  .newscard {
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+  .card-title {
+    font-size: 1rem !important;
+  }
+}
