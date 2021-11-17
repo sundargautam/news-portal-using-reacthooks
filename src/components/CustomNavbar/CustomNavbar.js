@@ -15,7 +15,7 @@ const Customnavbar = ({ brandName = "React News App" }) => {
                 Home
               </Nav.Link>
               <Nav.Link as={NavLink} exact to="/business">
-                Business
+                Health
               </Nav.Link>
             </Nav>
             <Nav>
